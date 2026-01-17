@@ -115,7 +115,7 @@ export const NetworkScene: React.FC = () => {
             <DataStreamParticles />
             <ConnectionLines />
         </Float>
-        <Environment preset="city" />
+        {/* Environment removed to prevent 'Failed to fetch' crash */}
       </Canvas>
     </div>
   );
