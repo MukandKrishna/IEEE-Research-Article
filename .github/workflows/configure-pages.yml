@@ -1,0 +1,12 @@
+name: Configure GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  configure-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/configure-pages@v5
