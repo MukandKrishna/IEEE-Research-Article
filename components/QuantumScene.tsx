@@ -8,7 +8,26 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Stars, Environment, PerspectiveCamera, Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
-// Add type definitions for R3F elements to fix JSX.IntrinsicElements errors
+// Fix for React 18+ and R3F types where JSX namespace might be scoped to React
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      mesh: any;
+      cylinderGeometry: any;
+      meshBasicMaterial: any;
+      group: any;
+      ambientLight: any;
+      pointLight: any;
+      planeGeometry: any;
+      meshStandardMaterial: any;
+      lineSegments: any;
+      edgesGeometry: any;
+      lineBasicMaterial: any;
+    }
+  }
+}
+
+// Fallback for global JSX namespace
 declare global {
   namespace JSX {
     interface IntrinsicElements {

@@ -69,7 +69,9 @@ const App: React.FC = () => {
             <a href="#results" onClick={scrollToSection('results')} className="hover:text-safe-blue transition-colors cursor-pointer">RESULTS</a>
             <a href="#team" onClick={scrollToSection('team')} className="hover:text-safe-blue transition-colors cursor-pointer">TEAM</a>
             <a 
-              href="#" 
+              href="https://ieeexplore.ieee.org/document/11192291/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors shadow-sm cursor-pointer"
             >
               <FileText size={16} />
